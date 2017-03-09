@@ -1,0 +1,39 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TestPostManCI",
+		"_postman_id": "2c0600e7-05d6-80c5-5cce-b549a3718f34",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://httpbin.org/get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://httpbin.org/get",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEifQ.isW8DDYi7rofYzf4uNw-9JY_lt_nZwjx2FbhDlkOIz8",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
